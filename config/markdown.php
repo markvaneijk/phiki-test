@@ -1,5 +1,7 @@
 <?php
 
+use Phiki\CommonMark\PhikiExtension;
+
 return [
     'code_highlighting' => [
         /*
@@ -7,7 +9,7 @@ return [
          *
          * More info: https://spatie.be/docs/laravel-markdown/v1/installation-setup
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * The name of or path to a Shiki theme
@@ -71,7 +73,7 @@ return [
      * More info: https://commonmark.thephpleague.com/2.4/extensions/overview/
      */
     'extensions' => [
-        //
+        new PhikiExtension('one-dark-pro')
     ],
 
     /*
